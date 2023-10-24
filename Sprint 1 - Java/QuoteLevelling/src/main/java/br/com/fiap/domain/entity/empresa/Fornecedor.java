@@ -13,7 +13,7 @@ import jakarta.persistence.*;
 public class Fornecedor extends Empresa{
 
     @Column(name = "CNPJ_FORNECEDOR", nullable = false)
-    private int cnpj_c;
+    private int cnpj_f;
 
     public Fornecedor() {
         super("FORNECEDOR");
@@ -29,6 +29,8 @@ public class Fornecedor extends Empresa{
             foreignKey = @ForeignKey(name = "FK_MATERIAL_FORNCEDOR")
     )
     private Material material;
+
+
 
     public Fornecedor(Long id, String nome, String descricao, int cnpj, Endereco endereco, double avaliacao, Material material) {
         super(id, nome, descricao, cnpj, "FORNECEDOR", endereco);
@@ -48,6 +50,14 @@ public class Fornecedor extends Empresa{
 
     public void setMateriais(Material materiais) {
         this.material = materiais;
+    }
+
+    public int getCnpj_f() {
+        return cnpj_f;
+    }
+
+    public void setCnpj_f(int cnpj_f) {
+        this.cnpj_f = cnpj_f;
     }
 
     @Override

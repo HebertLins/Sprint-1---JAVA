@@ -19,6 +19,13 @@ public class Cliente extends Empresa{
     }
 
 
+    public int getCnpj_c() {
+        return cnpj_c;
+    }
+
+    public void setCnpj_c(int cnpj_c) {
+        this.cnpj_c = cnpj_c;
+    }
 
     public Cliente(Long id, String nome, String descricao, int cnpj, Endereco endereco) {
         super(id, nome, descricao, cnpj, "CLIENTE", endereco);
